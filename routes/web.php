@@ -29,11 +29,14 @@ $router->get('/fred', function () use ($router) {
 });
 
 $router->get('/save', function () use ($router) {
-    
+
     $tool = R::dispense("tools");
 
-    $tool->name = "Fred";
+    $tool->title = "Fred";
+    $tool->description = "Description";
     $tool->link = "link";
+    //$tool->tags = serialize(array('node', 'php'));
+    $tool->tags = "node";
 
     $id = R::store($tool);
 
