@@ -29,3 +29,24 @@ Create service paackage and instance R::setup
 R::setup('mysql:host=localhost;port=3306;dbname=homestead','root','');
 
 Transactions: https://redbeanphp.com/manual3_0/index.php?p=/manual3_0/transactions
+
+
+
+
+
+Migrations
+
+https://laravel.com/docs/5.8/migrations
+
+criei .env e rodei:
+> php artisan make:migration create-tools-table
+edit "database/migrations/2019_07_09_002914_create-tools-table.php"
+> php artisan migrate --force
+
+
+
+
+
+Testing
+
+php .\vendor\phpunit\phpunit\phpunit
